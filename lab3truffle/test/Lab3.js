@@ -1,6 +1,6 @@
-const lab3 = artifacts.require("lab3");
+const Lab3 = artifacts.require("Lab3");
 
-contract("lab3", (accounts) => {
+contract("Lab3", (accounts) => {
   let lab3instance;
 
   const owner = accounts[0];
@@ -10,7 +10,7 @@ contract("lab3", (accounts) => {
   const borrowAmount = web3.utils.toWei("0.1", "ether");
 
   before(async () => {
-    lab3instance  = await lab3.deployed();
+    lab3instance  = await Lab3.deployed();
   });
 
   it("should allow the owner to deposit Ether", async () => {
